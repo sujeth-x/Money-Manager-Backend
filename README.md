@@ -1,101 +1,98 @@
-💰 Money Manager – Backend Service
-📌 Overview
+💻 Money Manager – Backend Application
+---
 
-The Money Manager Backend is a RESTful service developed using Spring Boot and MongoDB Atlas.
-It provides APIs to manage financial transactions such as income and expenses, enabling users to track spending, analyze summaries, and understand their financial balance 📊.
+## 📌 Overview
+The Money Manager Backend is a RESTful web service developed using **Spring Boot** and **MongoDB**.  
+It handles all business logic, data storage, and API operations required for managing income and expense transactions securely and efficiently ⚙️📊.
 
-This backend is designed to support a frontend client (React) and focuses on clean architecture, scalability, and maintainability 🧩.
+This backend serves as the core engine of the Money Manager application and communicates with the frontend via REST APIs.
 
-🎯 Problem Statement
+---
 
-Managing personal finances manually is error-prone and inefficient. Users need a reliable system to record transactions, analyze income versus expenses, and understand their financial balance.
+## 🎯 Problem Statement
+Managing financial data manually is error-prone and inefficient.  
+Users need a reliable backend system to store, process, and retrieve income and expense data with accuracy and performance.
 
-The Money Manager Backend solves this problem by offering structured APIs to store, retrieve, and summarize financial data securely 🔐.
+The Money Manager Backend solves this problem by providing structured APIs for transaction management and financial summaries 💡.
 
-✨ Key Features
+---
 
-➕ Create and manage income and expense transactions
+## ✨ Key Features
+➕ Add income and expense transactions  
+🧾 Retrieve all transactions  
+📅 Filter transactions by date range  
+✏️ Edit transactions within a limited time window  
+📊 Generate financial summaries (income, expense, balance)  
+🔐 Secure and structured data handling  
 
-📄 Retrieve all recorded transactions
+---
 
-📅 Filter transactions based on date range
+## 🛠️ Technology Stack
+☕ Java (Spring Boot)  
+🍃 MongoDB (NoSQL Database)  
+🌐 RESTful APIs  
+🧰 Spring Data MongoDB  
 
-📊 Generate financial summaries (total income, total expense, balance)
+---
 
-☁️ MongoDB Atlas cloud database integration
+## 🧱 Application Architecture
+The backend follows a layered architecture:
 
-🔗 RESTful API design with layered architecture
+🧩 Controller Layer – Handles API requests and responses  
+⚙️ Service Layer – Contains business logic  
+🗄️ Repository Layer – Interacts with MongoDB  
+📦 Model Layer – Defines data structures  
 
-🧪 Tested and validated using API testing tools
+This separation improves scalability, maintainability, and testability 🚀.
 
-🛠️ Technology Stack
+---
 
-☕ Programming Language: Java
+## 🔄 API Functionality
+The backend exposes REST APIs to:
 
-🌱 Framework: Spring Boot
+- Create income and expense records  
+- Fetch transaction history  
+- Filter data by date  
+- Calculate financial summaries  
+- Update transactions within allowed time  
 
-🍃 Database: MongoDB Atlas
+These APIs are consumed by the frontend to provide real-time financial insights ⚡.
 
-🏗️ Architecture: Controller – Service – Repository pattern
+---
 
-📦 Build Tool: Maven
+## 🗄️ Database Design
+MongoDB is used to store transaction records with fields such as:
 
-🏗️ Application Architecture
+- Amount  
+- Type (Income / Expense)  
+- Category  
+- Division (Personal / Office)  
+- Description  
+- Date & Time  
 
-The backend follows a standard layered architecture:
+The NoSQL design ensures flexibility and fast performance.
 
-🎮 Controller Layer: Handles HTTP requests and responses
+---
 
-🧠 Service Layer: Contains business logic and validations
+## 🧪 Testing & Validation
+The backend was tested using:
 
-🗄️ Repository Layer: Manages database interactions
+- Postman for API testing  
+- Validation of CRUD operations  
+- Verification of summary calculations  
 
-📁 Model Layer: Defines data structures and entities
+All endpoints were verified to ensure correct responses and data integrity.
 
-This separation ensures better readability, testability, and scalability 🚀.
+---
 
-⚙️ Configuration & Environment
+## 🏆 Hackathon Context
+This backend application was developed as part of a hackathon project submission 🏁.  
+The objective was to design a robust and scalable backend system within a limited timeframe ⏳.
 
-The application uses environment variables for sensitive configuration such as database credentials 🔑.
-This approach improves security and allows the application to run across different environments without code changes.
+---
 
-The server is configured to support dynamic port allocation, making it compatible with both local execution and cloud environments 🌍.
+## 👨‍💻 Author
+**Sujeth S**  
+🎓 Final Year Computer Science Student  
+💻 Backend Developer (Spring Boot & MongoDB)
 
-🌐 API Capabilities
-
-The backend exposes endpoints to:
-
-➕ Add new financial transactions
-
-📄 Retrieve all transactions
-
-📅 Filter transactions by date
-
-📊 Fetch summarized financial insights
-
-❤️ Perform basic health checks
-
-All APIs follow REST conventions and return structured JSON responses 📬.
-
-🧪 Testing & Validation
-
-The backend APIs were thoroughly tested to ensure:
-
-✅ Correct data persistence
-
-🧮 Accurate calculations
-
-📥 Proper request and response handling
-
-Testing was performed using API testing tools and verified against live MongoDB Atlas data 🔍.
-
-🏆 Hackathon Context
-
-This backend was developed as part of a hackathon project submission 🏁.
-The focus was on implementing core functionality, clean design, and real-world usability within the given time constraints ⏱️.
-
-👨‍💻 Author
-
-Sujeth S
-🎓 Final Year Computer Science Student
-💼 Backend Developer (Java & Spring Boot)
