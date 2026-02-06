@@ -1,100 +1,101 @@
-💰 Money Manager – Backend
-📌 Project Overview
+💰 Money Manager – Backend Service
+📌 Overview
 
-The Money Manager Backend is a RESTful API built using Spring Boot and MongoDB Atlas.
-It helps users manage their income and expenses, view summaries, and filter transactions by date.
+The Money Manager Backend is a RESTful service developed using Spring Boot and MongoDB Atlas.
+It provides APIs to manage financial transactions such as income and expenses, enabling users to track spending, analyze summaries, and understand their financial balance 📊.
 
-This backend serves as the core business logic layer for the Money Manager application and is consumed by a React frontend.
+This backend is designed to support a frontend client (React) and focuses on clean architecture, scalability, and maintainability 🧩.
 
-🚀 Features
+🎯 Problem Statement
 
-Add income and expense transactions
+Managing personal finances manually is error-prone and inefficient. Users need a reliable system to record transactions, analyze income versus expenses, and understand their financial balance.
 
-View all transactions
+The Money Manager Backend solves this problem by offering structured APIs to store, retrieve, and summarize financial data securely 🔐.
 
-Filter transactions by date range
+✨ Key Features
 
-Get financial summary (total income, total expense, balance)
+➕ Create and manage income and expense transactions
 
-MongoDB Atlas integration
+📄 Retrieve all recorded transactions
 
-RESTful API design
+📅 Filter transactions based on date range
 
-Tested using Postman
+📊 Generate financial summaries (total income, total expense, balance)
 
-🛠️ Tech Stack
+☁️ MongoDB Atlas cloud database integration
 
-Backend Framework: Spring Boot
+🔗 RESTful API design with layered architecture
 
-Language: Java
+🧪 Tested and validated using API testing tools
 
-Database: MongoDB Atlas
+🛠️ Technology Stack
 
-Build Tool: Maven
+☕ Programming Language: Java
 
-API Testing: Postman
+🌱 Framework: Spring Boot
 
-📂 Project Structure
-src/
- └── main/
-     ├── java/
-     │   └── com/moneymanager/
-     │       ├── controller/
-     │       ├── service/
-     │       ├── repository/
-     │       └── model/
-     └── resources/
-         └── application.properties
+🍃 Database: MongoDB Atlas
 
-⚙️ Configuration
-🔐 MongoDB Configuration
+🏗️ Architecture: Controller – Service – Repository pattern
 
-The application uses MongoDB Atlas.
+📦 Build Tool: Maven
 
-In application.properties:
+🏗️ Application Architecture
 
-spring.data.mongodb.uri=${MONGO_URI}
-spring.data.mongodb.database=moneymanager
-server.port=${PORT:8080}
+The backend follows a standard layered architecture:
 
+🎮 Controller Layer: Handles HTTP requests and responses
 
-Set the environment variable:
+🧠 Service Layer: Contains business logic and validations
 
-MONGO_URI = mongodb+srv://<username>:<password>@<cluster>.mongodb.net/moneymanager
+🗄️ Repository Layer: Manages database interactions
 
-▶️ How to Run the Backend Locally
-1️⃣ Clone the repository
-git clone https://github.com/sujeth-x/Money-Manager-Backend.git
-cd Money-Manager-Backend
+📁 Model Layer: Defines data structures and entities
 
-2️⃣ Configure MongoDB
+This separation ensures better readability, testability, and scalability 🚀.
 
-Set the MONGO_URI environment variable in your system.
+⚙️ Configuration & Environment
 
-3️⃣ Run the application
-mvn spring-boot:run
+The application uses environment variables for sensitive configuration such as database credentials 🔑.
+This approach improves security and allows the application to run across different environments without code changes.
 
+The server is configured to support dynamic port allocation, making it compatible with both local execution and cloud environments 🌍.
 
-or using Maven wrapper:
+🌐 API Capabilities
 
-./mvnw spring-boot:run
+The backend exposes endpoints to:
 
-📡 API Endpoints
-➕ Add Transaction
-POST /api/transactions
+➕ Add new financial transactions
 
-📄 Get All Transactions
-GET /api/transactions
+📄 Retrieve all transactions
 
-📊 Get Summary
-GET /api/transactions/summary
+📅 Filter transactions by date
 
-📅 Filter by Date
-GET /api/transactions/filter?from=YYYY-MM-DDTHH:mm&to=YYYY-MM-DDTHH:mm
+📊 Fetch summarized financial insights
 
-❤️ Health Check
-GET /
+❤️ Perform basic health checks
 
-🧪 Testing
+All APIs follow REST conventions and return structured JSON responses 📬.
 
-All APIs were tested using Postman with real-time data stored in MongoDB Atlas.
+🧪 Testing & Validation
+
+The backend APIs were thoroughly tested to ensure:
+
+✅ Correct data persistence
+
+🧮 Accurate calculations
+
+📥 Proper request and response handling
+
+Testing was performed using API testing tools and verified against live MongoDB Atlas data 🔍.
+
+🏆 Hackathon Context
+
+This backend was developed as part of a hackathon project submission 🏁.
+The focus was on implementing core functionality, clean design, and real-world usability within the given time constraints ⏱️.
+
+👨‍💻 Author
+
+Sujeth S
+🎓 Final Year Computer Science Student
+💼 Backend Developer (Java & Spring Boot)
